@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "f21be410-a5ea-4821-a0e7-f620d2d28307",
+		"name": "Expenzo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28000587"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n  \"email\": \"ramesh.gupta@example.com\",\r\n  \"password\": \"password1111\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addcat",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzhlOTZlMGNiMGYxMDhjMjAzOTExZjYiLCJpYXQiOjE3MzczOTgwNTksImV4cCI6MTczOTk5MDA1OX0.VBZCGkz026My7dm6zZ_e4zsH4amwlPJPwb3zRf4Yb78",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Dessert\",\r\n  \"description\": \"Exploring scrumptious delicacies\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/categories/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "allcat",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzhlOTZlMGNiMGYxMDhjMjAzOTExZjYiLCJpYXQiOjE3MzczOTgwNTksImV4cCI6MTczOTk5MDA1OX0.VBZCGkz026My7dm6zZ_e4zsH4amwlPJPwb3zRf4Yb78",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/categories/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addexp",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzhlOTZlMGNiMGYxMDhjMjAzOTExZjYiLCJpYXQiOjE3MzczOTgwNTksImV4cCI6MTczOTk5MDA1OX0.VBZCGkz026My7dm6zZ_e4zsH4amwlPJPwb3zRf4Yb78",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"date\": \"2025-01-21\",\r\n  \"category_id\": \"678e9834cb0f108c20391200\",  \r\n  \"amount\": 280.08,\r\n  \"description\": \"Well spent money on sweets.\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/expenses/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"expenses",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateexp",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzhlOTZlMGNiMGYxMDhjMjAzOTExZjYiLCJpYXQiOjE3MzczOTgwNTksImV4cCI6MTczOTk5MDA1OX0.VBZCGkz026My7dm6zZ_e4zsH4amwlPJPwb3zRf4Yb78",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"date\": \"2025-01-20\",\r\n  \"category_id\": \"678e9834cb0f108c20391200\",  \r\n  \"amount\": 270.60,\r\n  \"description\": \"Fun foods\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/expenses/678e989bcb0f108c20391203",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"expenses",
+						"678e989bcb0f108c20391203"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteexp",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzhlNzAwMGViYTUyNTRkNDg2ZWEzZTYiLCJpYXQiOjE3MzczOTAyOTUsImV4cCI6MTczOTk4MjI5NX0.OrEnqedCGeJNpvpaxBq2HhZ9Cw-j3rMFDWUqEXDBvfQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/expenses/678e79e33791781ab624618e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"expenses",
+						"678e79e33791781ab624618e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getexpbycat",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzhlOTZlMGNiMGYxMDhjMjAzOTExZjYiLCJpYXQiOjE3MzczOTgwNTksImV4cCI6MTczOTk5MDA1OX0.VBZCGkz026My7dm6zZ_e4zsH4amwlPJPwb3zRf4Yb78",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/expenses/category/678e9834cb0f108c20391200",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"expenses",
+						"category",
+						"678e9834cb0f108c20391200"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "monthlyrep",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzhlOTZlMGNiMGYxMDhjMjAzOTExZjYiLCJpYXQiOjE3MzczOTgwNTksImV4cCI6MTczOTk5MDA1OX0.VBZCGkz026My7dm6zZ_e4zsH4amwlPJPwb3zRf4Yb78",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/expenses/monthly-report",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"expenses",
+						"monthly-report"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
